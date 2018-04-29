@@ -12,7 +12,11 @@ String url = String url = "https://gocaps-interns.azurewebsites.net/api/UpdateSt
 StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>(){
     @Override
     public void onResponse(String response) {
-        // Processing
+        if(new String("false").equals(response)){
+            // User Had No Account
+        } else {
+            // User Has Account
+        }
     }
 }, new Response.ErrorListener() {
     @Override
@@ -55,7 +59,11 @@ String url = "https://gocaps-interns.azurewebsites.net/api/UpdateStudent?code=12
 StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>(){
     @Override
     public void onResponse(String response) {
-        // Processing
+        if(new String("false").equals(response)){
+            // User Had No Account
+        } else {
+            // User Has Account
+        }
     }
 }, new Response.ErrorListener() {
     @Override
