@@ -337,7 +337,11 @@ You must replace <code>12345qwerty</code> with your personal API key.
 <span class="n">StringRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringRequest</span><span class="o">(</span><span class="n">Request</span><span class="o">.</span><span class="na">Method</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> <span class="n">url</span><span class="o">,</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">Listener</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(){</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onResponse</span><span class="o">(</span><span class="n">String</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// Processing</span>
+        <span class="k">if</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"false"</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">response</span><span class="o">)){</span>
+            <span class="c1">// User Had No Account</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="c1">// User Has Account</span>
+        <span class="o">}</span>
     <span class="o">}</span>
 <span class="o">},</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">ErrorListener</span><span class="o">()</span> <span class="o">{</span>
     <span class="nd">@Override</span>
@@ -416,7 +420,11 @@ You must replace <code>12345qwerty</code> with your personal API key.
 <span class="n">StringRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringRequest</span><span class="o">(</span><span class="n">Request</span><span class="o">.</span><span class="na">Method</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> <span class="n">url</span><span class="o">,</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">Listener</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(){</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onResponse</span><span class="o">(</span><span class="n">String</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// Processing</span>
+        <span class="k">if</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"false"</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">response</span><span class="o">)){</span>
+            <span class="c1">// User Had No Account</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="c1">// User Has Account</span>
+        <span class="o">}</span>
     <span class="o">}</span>
 <span class="o">},</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">ErrorListener</span><span class="o">()</span> <span class="o">{</span>
     <span class="nd">@Override</span>
