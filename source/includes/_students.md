@@ -26,6 +26,7 @@ StringRequest request = new StringRequest(Request.Method.POST, url, new Response
     }
 });
 ```
+> Don't forget to replace token with your authorization token from Azure!
 
 Now, for a student to use the GO CAPS API, they will need to be have a registered account. Using our API, an account can be easily made provided the correct paramaters are fulliled.
 
