@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;java&quot;,&quot;swift&quot;]">
+  <body class="index" data-languages="[&quot;java&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -212,7 +212,6 @@
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="java">java</a>
-              <a href="#" data-language-name="swift">swift</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -226,7 +225,7 @@
             <a href="#required-external-libaries" class="toc-h1 toc-link" data-title="required-external-libaries">Required External Libaries</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
+            <a href="#making-requests" class="toc-h1 toc-link" data-title="making-requests">Making Requests</a>
           </li>
           <li>
             <a href="#students" class="toc-h1 toc-link" data-title="students">Students</a>
@@ -275,17 +274,61 @@
 <td>Allows for Notifications, Real-Time Databasing, and Usage Data</td>
 </tr>
 </tbody></table>
-<h1 id='authentication'>Authentication</h1>
-<p>GO CAPS uses API keys to allow access to the API. You can obtain an API token by going to the Microsoft Azure Functions panel.</p>
+<h1 id='making-requests'>Making Requests</h1><pre class="highlight java tab-java"><code><span class="c1">// Create Request Queue</span>
+<span class="n">RequestQueue</span> <span class="n">queue</span> <span class="o">=</span> <span class="n">Volley</span><span class="o">.</span><span class="na">newRequestQueue</span><span class="o">(</span><span class="n">getContext</span><span class="o">());</span>
+<span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="c1">// See Individual API Docs</span>
+
+<span class="c1">// Setup Request</span>
+<span class="n">StringRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringRequest</span><span class="o">(</span><span class="n">Request</span><span class="o">.</span><span class="na">Method</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> <span class="n">url</span><span class="o">,</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">Listener</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(){</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onResponse</span><span class="o">(</span><span class="n">String</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Processing</span>
+    <span class="o">}</span>
+<span class="o">},</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">ErrorListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onErrorResponse</span><span class="o">(</span><span class="n">VolleyError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// API Was Unreachable</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+
+<span class="c1">//Add to Request Queue</span>
+<span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
+</code></pre>
+<blockquote>
+<p>Don&#39;t forget to replace <code>12345qwerty</code>` with your authorization token from Azure!</p>
+</blockquote>
+
+<p>In order to use our API, your going to have to make HTTP requests to our system. In this section you can find some code snippets to configure your HTTP requests.</p>
+
+<table><thead>
+<tr>
+<th>Programming Language</th>
+<th>Library Name</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Java</td>
+<td>Volley</td>
+</tr>
+<tr>
+<td>Swift</td>
+<td>AlamoFire</td>
+</tr>
+<tr>
+<td>Objective C</td>
+<td>AlamoFire</td>
+</tr>
+</tbody></table>
+
+<p>In order to use our API though, you will need to API authorization key. You can obtain an API token by going to the Microsoft Azure Functions panel.</p>
 
 <p><code>Authorization: 12345qwerty</code></p>
 
 <aside class="notice">
 You must replace <code>12345qwerty</code> with your personal API key.
 </aside>
-<h1 id='students'>Students</h1><h2 id='register-student'>Register Student</h2><pre class="highlight java tab-java"><code><span class="c1">// Open An HTTP Request with Volley</span>
-<span class="n">RequestQueue</span> <span class="n">queue</span> <span class="o">=</span> <span class="n">Volley</span><span class="o">.</span><span class="na">newRequestQueue</span><span class="o">(</span><span class="n">getContext</span><span class="o">());</span>
-<span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://gocaps-interns.azurewebsites.net/api/UpdateStudent?code=12345qwerty&amp;StuID="</span> <span class="o">+</span> 
+<h1 id='students'>Students</h1><h2 id='register-student'>Register Student</h2><pre class="highlight java tab-java"><code><span class="c1">// Create Request Queue</span>
+<span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://gocaps-interns.azurewebsites.net/api/UpdateStudent?code=12345qwerty&amp;StuID="</span> <span class="o">+</span> 
     <span class="n">FirebaseAuth</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getUid</span><span class="o">()</span> <span class="o">+</span> <span class="s">"&amp;StuFirstName="</span> <span class="o">+</span> <span class="n">f</span> <span class="o">+</span> <span class="s">"&amp;StuLastName="</span> <span class="o">+</span> <span class="n">l</span> <span class="o">+</span> 
     <span class="s">"&amp;StuEmailAddress="</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s">"&amp;StuPhoneNum="</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">"&amp;StuSchool="</span> <span class="o">+</span> <span class="n">school</span> <span class="o">+</span> <span class="s">"&amp;StrandID="</span> <span class="o">+</span> 
     <span class="n">strand</span> <span class="o">+</span> <span class="s">"&amp;StrandSession="</span> <span class="o">+</span> <span class="o">(</span><span class="n">time</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">?</span> <span class="s">"AM"</span> <span class="o">:</span> <span class="s">"PM"</span><span class="o">);</span>
@@ -294,11 +337,7 @@ You must replace <code>12345qwerty</code> with your personal API key.
 <span class="n">StringRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringRequest</span><span class="o">(</span><span class="n">Request</span><span class="o">.</span><span class="na">Method</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> <span class="n">url</span><span class="o">,</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">Listener</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(){</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onResponse</span><span class="o">(</span><span class="n">String</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"false"</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">response</span><span class="o">)){</span>
-            <span class="c1">// User Had No Account</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-            <span class="c1">// User Has Account</span>
-        <span class="o">}</span>
+        <span class="c1">// Processing</span>
     <span class="o">}</span>
 <span class="o">},</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">ErrorListener</span><span class="o">()</span> <span class="o">{</span>
     <span class="nd">@Override</span>
@@ -307,14 +346,8 @@ You must replace <code>12345qwerty</code> with your personal API key.
     <span class="o">}</span>
 <span class="o">});</span>
 </code></pre>
-<blockquote>
-<p>Don&#39;t forget to replace token with your authorization token from Azure!</p>
-</blockquote>
-
 <p>Now, for a student to use the GO CAPS API, they will need to be have a registered account. Using our API, an account can be easily made provided the correct paramaters are fulliled.</p>
-
-<p>For this you will need to pass in the following required paramaters:</p>
-
+<h3 id='parameters'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -358,19 +391,32 @@ You must replace <code>12345qwerty</code> with your personal API key.
 <td><code>AM</code> or <code>PM</code> Only</td>
 </tr>
 </tbody></table>
+<h3 id='responses'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The account was made successfully</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>There was an error making the account.</td>
+</tr>
+</tbody></table>
 <h2 id='find-if-user-has-registered'>Find If User Has Registered</h2><pre class="highlight java tab-java"><code><span class="c1">// Open An HTTP Request with Volley</span>
-<span class="n">RequestQueue</span> <span class="n">queue</span> <span class="o">=</span> <span class="n">Volley</span><span class="o">.</span><span class="na">newRequestQueue</span><span class="o">(</span><span class="n">getContext</span><span class="o">());</span>
-<span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://gocaps-interns.azurewebsites.net/api/UpdateStudent?code=12345qwerty&amp;StuID="</span> <span class="o">+</span> <span class="n">FirebaseAuth</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getUid</span><span class="o">();</span>
+<span class="nd">@Override</span>
+<span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://gocaps-interns.azurewebsites.net/api/UpdateStudent?code=12345qwerty&amp;StuID="</span> <span class="o">+</span>
+    <span class="n">FirebaseAuth</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getUid</span><span class="o">();</span>
 
 <span class="c1">// Setup Request</span>
 <span class="n">StringRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringRequest</span><span class="o">(</span><span class="n">Request</span><span class="o">.</span><span class="na">Method</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> <span class="n">url</span><span class="o">,</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">Listener</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(){</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onResponse</span><span class="o">(</span><span class="n">String</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"false"</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">response</span><span class="o">)){</span>
-            <span class="c1">// User Had No Account</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-            <span class="c1">// User Has Account</span>
-        <span class="o">}</span>
+        <span class="c1">// Processing</span>
     <span class="o">}</span>
 <span class="o">},</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">ErrorListener</span><span class="o">()</span> <span class="o">{</span>
     <span class="nd">@Override</span>
@@ -378,19 +424,25 @@ You must replace <code>12345qwerty</code> with your personal API key.
         <span class="c1">// API Was Unreachable</span>
     <span class="o">}</span>
 <span class="o">});</span>
-</code></pre><pre class="highlight swift tab-swift"><code>
 </code></pre>
 <blockquote>
-<p>Don&#39;t forget to replace token with your authorization token from Azure!</p>
+<p>Breakdown of Returned User Data:</p>
 </blockquote>
-
-<p>At various points in your implementation you may want to check to see if a student has registered. Thankfully, you can easily check and see if they have finished the registration process.</p>
-
-<p>For this you will need to pass in the following required paramaters:</p>
-
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"StuId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678dfvbgnh"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StuFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StuLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StuPhoneNum"</span><span class="p">:</span><span class="w">  </span><span class="s2">"123-456-7890"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StuSchool"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kickapoo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StrandID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StrandSession"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AM"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>At various points in your implementation you may want to check to see if a student has registered. Thankfully, you can easily check and see if they have finished the registration process. If the user exists in the system, the user&#39;s data will be returned. Should the account not exist, </p>
+<h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Variable</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
@@ -399,12 +451,51 @@ You must replace <code>12345qwerty</code> with your personal API key.
 <td>The ID of the student</td>
 </tr>
 </tbody></table>
+<h3 id='response-data'>Response Data</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>StuID</td>
+<td>The ID of the student</td>
+</tr>
+<tr>
+<td>StuFirstName</td>
+<td>The first name of the student</td>
+</tr>
+<tr>
+<td>StuLastName</td>
+<td>The last name of the student</td>
+</tr>
+<tr>
+<td>StuPhoneNum</td>
+<td>The cell phone number of the student</td>
+</tr>
+<tr>
+<td>StuSchool</td>
+<td>The sending school of the student</td>
+</tr>
+<tr>
+<td>StrandID</td>
+<td>The ID of the stand the student is in</td>
+</tr>
+<tr>
+<td>StrandSession</td>
+<td>The meeting time of their strand</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+The data above will only be returned if the user account exists. If you get <code>false</code> returned, plese handle the response appropriately by having them register for an account.
+</aside>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="java">java</a>
-                <a href="#" data-language-name="swift">swift</a>
           </div>
       </div>
     </div>
