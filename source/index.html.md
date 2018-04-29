@@ -3,13 +3,13 @@ title: GOCAPS Intern API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - java
-  - swift
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
+  - requests
   - students
 
 search: true
@@ -31,13 +31,3 @@ Platform  | Name    | Description
 --------- | ------- | -----------
 Android | Volley | Allows for Easy HTTP Requests
 Android/iOS | Firebase | Allows for Notifications, Real-Time Databasing, and Usage Data
-
-# Authentication
-
-GO CAPS uses API keys to allow access to the API. You can obtain an API token by going to the Microsoft Azure Functions panel.
-
-`Authorization: 12345qwerty`
-
-<aside class="notice">
-You must replace <code>12345qwerty</code> with your personal API key.
-</aside>
