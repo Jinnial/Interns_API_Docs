@@ -87,7 +87,7 @@ StringRequest request = new StringRequest(Request.Method.POST, url, new Response
 }
 ```
 
-At various points in your implementation you may want to check to see if a student has registered. Thankfully, you can easily check and see if they have finished the registration process. If the user exists in the system, the user's data will be returned. Should the account not exist, 
+At various points in your implementation you may want to check to see if a student has registered. Thankfully, you can easily check and see if they have finished the registration process. If the user exists in the system, the user's data will be returned.
 
 ### Parameters
 
