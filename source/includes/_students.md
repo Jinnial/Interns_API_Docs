@@ -99,6 +99,7 @@ StuID | The ID of the student
 
 Key | Description
 --- | -----------
+result | Tells if the function found a user
 StuID | The ID of the student
 StuFirstName | The first name of the student
 StuLastName | The last name of the student
@@ -108,5 +109,5 @@ StrandID | The ID of the stand the student is in
 StrandSession | The meeting time of their strand
 
 <aside class="warning">
-The data above will only be returned if the user account exists. If you get <code>false</code> returned, plese handle the response appropriately by having them register for an account.
+The data above will only be returned if the user account exists. If the <code>result</code> value returns false, the user account does not exist. Please handle this response appropriately by having them register for an account.
 </aside>
