@@ -467,6 +467,10 @@ You must replace <code>12345qwerty</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
+<td>result</td>
+<td>Tells if the function found a user</td>
+</tr>
+<tr>
 <td>StuID</td>
 <td>The ID of the student</td>
 </tr>
@@ -497,7 +501,7 @@ You must replace <code>12345qwerty</code> with your personal API key.
 </tbody></table>
 
 <aside class="warning">
-The data above will only be returned if the user account exists. If you get <code>false</code> returned, plese handle the response appropriately by having them register for an account.
+The data above will only be returned if the user account exists. If the <code>result</code> value returns false, the user account does not exist. Please handle this response appropriately by having them register for an account.
 </aside>
 
       </div>
