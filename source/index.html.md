@@ -10,6 +10,7 @@ toc_footers:
 
 includes:
   - requests
+  - teachers
   - students
 
 search: true

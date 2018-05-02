@@ -47,12 +47,12 @@ Variable | Description
 `true` | The account was made successfully
 `false` | There was an error making the account.
 
-## Find If User Has Registered
+## Find If Student Has Registered
 
 ```java
 // Open An HTTP Request with Volley
 @Override
-String url = "https://gocaps-interns.azurewebsites.net/api/UpdateStudent?code=12345qwerty&StuID=" +
+String url = "https://gocaps-interns.azurewebsites.net/api/DoesStudentExist?code=12345qwerty&StuID=" +
     FirebaseAuth.getInstance().getUid();
 
 // Setup Request
@@ -93,7 +93,7 @@ At various points in your implementation you may want to check to see if a stude
 
 Variable | Description
 -------- | -----------
-StuID | The ID of the student
+uID | The ID of the Student
 
 ### Response Data
 
@@ -107,6 +107,8 @@ StuPhoneNum | The cell phone number of the student
 StuSchool | The sending school of the student
 StrandID | The ID of the stand the student is in
 StrandSession | The meeting time of their strand
+StuAge | The age of the student
+StuEmail | The student's email address
 
 <aside class="warning">
 The data above will only be returned if the user account exists. If the <code>result</code> value returns false, the user account does not exist. Please handle this response appropriately by having them register for an account.
