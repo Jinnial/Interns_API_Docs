@@ -228,13 +228,21 @@
             <a href="#making-requests" class="toc-h1 toc-link" data-title="making-requests">Making Requests</a>
           </li>
           <li>
+            <a href="#teachers" class="toc-h1 toc-link" data-title="teachers">Teachers</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#find-if-teacher-has-registered" class="toc-h2 toc-link" data-title="find-if-teacher-has-registered">Find If Teacher Has Registered</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#students" class="toc-h1 toc-link" data-title="students">Students</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#register-student" class="toc-h2 toc-link" data-title="register-student">Register Student</a>
                   </li>
                   <li>
-                    <a href="#find-if-user-has-registered" class="toc-h2 toc-link" data-title="find-if-user-has-registered">Find If User Has Registered</a>
+                    <a href="#find-if-student-has-registered" class="toc-h2 toc-link" data-title="find-if-student-has-registered">Find If Student Has Registered</a>
                   </li>
               </ul>
           </li>
@@ -327,6 +335,88 @@
 <aside class="notice">
 You must replace <code>12345qwerty</code> with your personal API key.
 </aside>
+<h1 id='teachers'>Teachers</h1><h2 id='find-if-teacher-has-registered'>Find If Teacher Has Registered</h2><pre class="highlight java tab-java"><code><span class="c1">// Open An HTTP Request with Volley</span>
+<span class="nd">@Override</span>
+<span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://gocaps-interns.azurewebsites.net/api/DoesTeacherExist?code=12345qwerty&amp;StuID="</span> <span class="o">+</span>
+    <span class="n">FirebaseAuth</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getUid</span><span class="o">();</span>
+
+<span class="c1">// Setup Request</span>
+<span class="n">StringRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringRequest</span><span class="o">(</span><span class="n">Request</span><span class="o">.</span><span class="na">Method</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> <span class="n">url</span><span class="o">,</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">Listener</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(){</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onResponse</span><span class="o">(</span><span class="n">String</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"false"</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">response</span><span class="o">)){</span>
+            <span class="c1">// User Had No Account</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="c1">// User Has Account</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">},</span> <span class="k">new</span> <span class="n">Response</span><span class="o">.</span><span class="na">ErrorListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onErrorResponse</span><span class="o">(</span><span class="n">VolleyError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// API Was Unreachable</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</code></pre>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"TeachID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"TeachFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brenden"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"TeachLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reeves"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"TeachPhoneNum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"417-355-1529"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"TeachEmailAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reevesb375@gmail.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>At various points in your implementation you may want to check to see if a teacher has registered. Thankfully, you can easily check and see if they have finished the registration process. If the user exists in the system, the user&#39;s data will be returned.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>uID</td>
+<td>The ID of the Teacher</td>
+</tr>
+</tbody></table>
+<h3 id='response-data'>Response Data</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>result</td>
+<td>Tells if the function found a user</td>
+</tr>
+<tr>
+<td>TeachID</td>
+<td>The ID of the student</td>
+</tr>
+<tr>
+<td>TeachFirstName</td>
+<td>The first name of the student</td>
+</tr>
+<tr>
+<td>TeachLastName</td>
+<td>The last name of the student</td>
+</tr>
+<tr>
+<td>TeachPhoneNum</td>
+<td>The cell phone number of the student</td>
+</tr>
+<tr>
+<td>TeachEmail</td>
+<td>The email of the instructor</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+The data above will only be returned if the user account exists. If the <code>result</code> value returns false, the user account does not exist. Please handle this response appropriately by having them register for an account.
+</aside>
 <h1 id='students'>Students</h1><h2 id='register-student'>Register Student</h2><pre class="highlight java tab-java"><code><span class="c1">// Create Request Queue</span>
 <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://gocaps-interns.azurewebsites.net/api/UpdateStudent?code=12345qwerty&amp;StuID="</span> <span class="o">+</span> 
     <span class="n">FirebaseAuth</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getUid</span><span class="o">()</span> <span class="o">+</span> <span class="s">"&amp;StuFirstName="</span> <span class="o">+</span> <span class="n">f</span> <span class="o">+</span> <span class="s">"&amp;StuLastName="</span> <span class="o">+</span> <span class="n">l</span> <span class="o">+</span> 
@@ -411,9 +501,9 @@ You must replace <code>12345qwerty</code> with your personal API key.
 <td>There was an error making the account.</td>
 </tr>
 </tbody></table>
-<h2 id='find-if-user-has-registered'>Find If User Has Registered</h2><pre class="highlight java tab-java"><code><span class="c1">// Open An HTTP Request with Volley</span>
+<h2 id='find-if-student-has-registered'>Find If Student Has Registered</h2><pre class="highlight java tab-java"><code><span class="c1">// Open An HTTP Request with Volley</span>
 <span class="nd">@Override</span>
-<span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://gocaps-interns.azurewebsites.net/api/UpdateStudent?code=12345qwerty&amp;StuID="</span> <span class="o">+</span>
+<span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://gocaps-interns.azurewebsites.net/api/DoesStudentExist?code=12345qwerty&amp;StuID="</span> <span class="o">+</span>
     <span class="n">FirebaseAuth</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getUid</span><span class="o">();</span>
 
 <span class="c1">// Setup Request</span>
@@ -455,8 +545,8 @@ You must replace <code>12345qwerty</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>StuID</td>
-<td>The ID of the student</td>
+<td>uID</td>
+<td>The ID of the Student</td>
 </tr>
 </tbody></table>
 <h3 id='response-data'>Response Data</h3>
@@ -497,6 +587,14 @@ You must replace <code>12345qwerty</code> with your personal API key.
 <tr>
 <td>StrandSession</td>
 <td>The meeting time of their strand</td>
+</tr>
+<tr>
+<td>StuAge</td>
+<td>The age of the student</td>
+</tr>
+<tr>
+<td>StuEmail</td>
+<td>The student&#39;s email address</td>
 </tr>
 </tbody></table>
 
