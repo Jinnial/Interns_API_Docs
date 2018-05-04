@@ -31,6 +31,7 @@ StringRequest request = new StringRequest(Request.Method.POST, url, new Response
 ```json
 {
   "TeachID": "example",
+  "TeachStrand": 2,
   "TeachFirstName": "Brenden",
   "TeachLastName": "Reeves",
   "TeachPhoneNum": "417-355-1529",
@@ -51,7 +52,8 @@ uID | The ID of the Teacher
 Key | Description
 --- | -----------
 result | Tells if the function found a user
-TeachID | The ID of the student
+TeachStrand | The ID of the strand which they teach
+TeachID | The ID of the teacher
 TeachFirstName | The first name of the student
 TeachLastName | The last name of the student
 TeachPhoneNum | The cell phone number of the student
