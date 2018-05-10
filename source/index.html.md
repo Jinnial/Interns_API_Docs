@@ -12,6 +12,7 @@ includes:
   - requests
   - teachers
   - students
+  - function
 
 search: true
 ---
