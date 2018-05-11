@@ -246,6 +246,98 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#azure-functions" class="toc-h1 toc-link" data-title="azure-functions">Azure Functions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#addaffiliate" class="toc-h2 toc-link" data-title="addaffiliate">AddAffiliate</a>
+                  </li>
+                  <li>
+                    <a href="#addcontact" class="toc-h2 toc-link" data-title="addcontact">AddContact</a>
+                  </li>
+                  <li>
+                    <a href="#addpartner" class="toc-h2 toc-link" data-title="addpartner">AddPartner</a>
+                  </li>
+                  <li>
+                    <a href="#addshadow" class="toc-h2 toc-link" data-title="addshadow">AddShadow</a>
+                  </li>
+                  <li>
+                    <a href="#addstrand" class="toc-h2 toc-link" data-title="addstrand">AddStrand</a>
+                  </li>
+                  <li>
+                    <a href="#addstudent" class="toc-h2 toc-link" data-title="addstudent">AddStudent</a>
+                  </li>
+                  <li>
+                    <a href="#addteacher" class="toc-h2 toc-link" data-title="addteacher">AddTeacher</a>
+                  </li>
+                  <li>
+                    <a href="#assignstudent" class="toc-h2 toc-link" data-title="assignstudent">AssignStudent</a>
+                  </li>
+                  <li>
+                    <a href="#clockin" class="toc-h2 toc-link" data-title="clockin">ClockIn</a>
+                  </li>
+                  <li>
+                    <a href="#clockout" class="toc-h2 toc-link" data-title="clockout">ClockOut</a>
+                  </li>
+                  <li>
+                    <a href="#isshadowfull" class="toc-h2 toc-link" data-title="isshadowfull">IsShadowFull</a>
+                  </li>
+                  <li>
+                    <a href="#removepartner" class="toc-h2 toc-link" data-title="removepartner">RemovePartner</a>
+                  </li>
+                  <li>
+                    <a href="#removeshadow" class="toc-h2 toc-link" data-title="removeshadow">RemoveShadow</a>
+                  </li>
+                  <li>
+                    <a href="#showcontactwithcontactid" class="toc-h2 toc-link" data-title="showcontactwithcontactid">ShowContactWithContactID</a>
+                  </li>
+                  <li>
+                    <a href="#showlatestclockinfowithstuid" class="toc-h2 toc-link" data-title="showlatestclockinfowithstuid">ShowLatestClockInfoWithStuID</a>
+                  </li>
+                  <li>
+                    <a href="#showpartnerandcontactwithcontactid" class="toc-h2 toc-link" data-title="showpartnerandcontactwithcontactid">ShowPartnerAndContactWithContactID</a>
+                  </li>
+                  <li>
+                    <a href="#showpartners" class="toc-h2 toc-link" data-title="showpartners">ShowPartners</a>
+                  </li>
+                  <li>
+                    <a href="#showpartnerwithpartnerid" class="toc-h2 toc-link" data-title="showpartnerwithpartnerid">ShowPartnerWithPartnerID</a>
+                  </li>
+                  <li>
+                    <a href="#showshadowavailability" class="toc-h2 toc-link" data-title="showshadowavailability">ShowShadowAvailability</a>
+                  </li>
+                  <li>
+                    <a href="#showshadowavailabilityjson" class="toc-h2 toc-link" data-title="showshadowavailabilityjson">ShowShadowAvailabilityJSON</a>
+                  </li>
+                  <li>
+                    <a href="#showshadowsinstrand" class="toc-h2 toc-link" data-title="showshadowsinstrand">ShowShadowsInStrand</a>
+                  </li>
+                  <li>
+                    <a href="#showshadowsinstrandjson" class="toc-h2 toc-link" data-title="showshadowsinstrandjson">ShowShadowsInStrandJSON</a>
+                  </li>
+                  <li>
+                    <a href="#showshadowwithshadowid" class="toc-h2 toc-link" data-title="showshadowwithshadowid">ShowShadowWithShadowID</a>
+                  </li>
+                  <li>
+                    <a href="#showstrands" class="toc-h2 toc-link" data-title="showstrands">ShowStrands</a>
+                  </li>
+                  <li>
+                    <a href="#studentsinsession" class="toc-h2 toc-link" data-title="studentsinsession">StudentsInSession</a>
+                  </li>
+                  <li>
+                    <a href="#updatepartner" class="toc-h2 toc-link" data-title="updatepartner">UpdatePartner</a>
+                  </li>
+                  <li>
+                    <a href="#updateshadow" class="toc-h2 toc-link" data-title="updateshadow">UpdateShadow</a>
+                  </li>
+                  <li>
+                    <a href="#updatestudent" class="toc-h2 toc-link" data-title="updatestudent">UpdateStudent</a>
+                  </li>
+                  <li>
+                    <a href="#updateteacher" class="toc-h2 toc-link" data-title="updateteacher">UpdateTeacher</a>
+                  </li>
+              </ul>
+          </li>
       </div>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
@@ -606,6 +698,1263 @@ The data above will only be returned if the user account exists. If the <code>re
 <aside class="warning">
 The data above will only be returned if the user account exists. If the <code>result</code> value returns false, the user account does not exist. Please handle this response appropriately by having them register for an account.
 </aside>
+<h1 id='azure-functions'>Azure Functions</h1><h2 id='addaffiliate'>AddAffiliate</h2>
+<p>Adds an affiliate</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Options</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>AffiliateName</td>
+<td>Name of affiliate</td>
+<td></td>
+</tr>
+<tr>
+<td>AffiliateLocation</td>
+<td>Location of affiliate</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='responses'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The affiliate was added correctly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>There was an error adding the affiliate</td>
+</tr>
+</tbody></table>
+<h2 id='addcontact'>AddContact</h2>
+<p>Adds a contact</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ContactFirstName</td>
+<td>First name of contact</td>
+</tr>
+<tr>
+<td>ContactLastName</td>
+<td>Last name of contact</td>
+</tr>
+<tr>
+<td>ContactPhoneNum</td>
+<td>Phone number of contact</td>
+</tr>
+<tr>
+<td>ContactOffice</td>
+<td>Office number of contact</td>
+</tr>
+<tr>
+<td>ContactEmailAddress</td>
+<td>Email address of contact</td>
+</tr>
+</tbody></table>
+<h3 id='responses-2'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>ContactID</code></td>
+<td>The contact was added correctly, and the function returned an auto-generated ContactID</td>
+</tr>
+<tr>
+<td><code>999</code></td>
+<td>There was an error adding the contact</td>
+</tr>
+</tbody></table>
+<h2 id='addpartner'>AddPartner</h2>
+<p>Adds a partner</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ContactID</td>
+<td>Contact ID for the contact associated with this partner</td>
+</tr>
+<tr>
+<td>PartnerName</td>
+<td>Name of partner</td>
+</tr>
+<tr>
+<td>PartnerAddress</td>
+<td>Address of partner</td>
+</tr>
+<tr>
+<td>PartnerPhoneNum</td>
+<td>Phone number of partner</td>
+</tr>
+</tbody></table>
+<h3 id='responses-3'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The contact was added correctly, and the function returned an auto-generated ContactID</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>There was an error adding the contact</td>
+</tr>
+</tbody></table>
+<h2 id='addshadow'>AddShadow</h2>
+<p>Adds a shadow</p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PartnerID</td>
+<td>Partner ID for the partner associated with this shadow</td>
+</tr>
+<tr>
+<td>ShadowName</td>
+<td>Name of shadow</td>
+</tr>
+<tr>
+<td>ShadowStarTime</td>
+<td>Time the shadow begins</td>
+</tr>
+<tr>
+<td>ShadowEndTime</td>
+<td>Time the shadow ends</td>
+</tr>
+<tr>
+<td>ShadowLocation</td>
+<td>Where the shadow is located</td>
+</tr>
+<tr>
+<td>ShadowDressCode</td>
+<td>Required dress for shadow</td>
+</tr>
+<tr>
+<td>ShadowParking</td>
+<td>Parking details regarding this shadow</td>
+</tr>
+<tr>
+<td>ShadowOtherDetails</td>
+<td>Any other details regarding this shadow</td>
+</tr>
+<tr>
+<td>ShadowMaxEnrollment</td>
+<td>Maximum number of students that can be assigned to this shadow</td>
+</tr>
+</tbody></table>
+<h3 id='responses-4'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The shadow was added correctly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>There was an error adding the shadow</td>
+</tr>
+</tbody></table>
+<h2 id='addstrand'>AddStrand</h2>
+<p>Adds a strand</p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>AffiliateID</td>
+<td>ID of affiliate associated with this strand</td>
+</tr>
+<tr>
+<td>TeachID</td>
+<td>ID of teacher that will be teaching this strand</td>
+</tr>
+<tr>
+<td>StrandName</td>
+<td>Name of this strand</td>
+</tr>
+<tr>
+<td>StrandLocation</td>
+<td>Where this strand is located</td>
+</tr>
+</tbody></table>
+<h3 id='responses-5'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The strand was added correctly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>There was an error adding the strand</td>
+</tr>
+</tbody></table>
+<h2 id='addstudent'>AddStudent</h2>
+<p>Adds a student</p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Options</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>StuID</td>
+<td>ID of student to be added</td>
+<td></td>
+</tr>
+<tr>
+<td>StrandID</td>
+<td>ID of strand this student is enrolled in</td>
+<td></td>
+</tr>
+<tr>
+<td>StuFirstName</td>
+<td>Student&#39;s first name</td>
+<td></td>
+</tr>
+<tr>
+<td>StuLastName</td>
+<td>Student&#39;s last name</td>
+<td></td>
+</tr>
+<tr>
+<td>StuSchool</td>
+<td>School this student attends</td>
+<td></td>
+</tr>
+<tr>
+<td>StuAge</td>
+<td>Student&#39;s age</td>
+<td></td>
+</tr>
+<tr>
+<td>StuEmailAddress</td>
+<td>Student&#39;s email address</td>
+<td></td>
+</tr>
+<tr>
+<td>StuPhoneNum</td>
+<td>Student&#39;s phone number</td>
+<td></td>
+</tr>
+<tr>
+<td>StrandSession</td>
+<td>Session of strand this student is enrolled in</td>
+<td><code>AM</code> or <code>PM</code> only</td>
+</tr>
+</tbody></table>
+<h3 id='responses-6'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The student was added correctly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>There was an error adding the student</td>
+</tr>
+</tbody></table>
+<h2 id='addteacher'>AddTeacher</h2>
+<p>Adds a teacher</p>
+<h3 id='parameters-7'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TeachID</td>
+<td>ID for this teacher</td>
+</tr>
+<tr>
+<td>TeachFirstName</td>
+<td>Teacher&#39;s first name</td>
+</tr>
+<tr>
+<td>TeachLastName</td>
+<td>Teacher&#39;s last name</td>
+</tr>
+<tr>
+<td>TeachPhoneNum</td>
+<td>Teacher&#39;s phone number</td>
+</tr>
+<tr>
+<td>TeachEmailAddress</td>
+<td>Teacher&#39;s email address</td>
+</tr>
+</tbody></table>
+<h3 id='responses-7'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The teacher was added correctly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>There was an error adding the teacher</td>
+</tr>
+</tbody></table>
+<h2 id='assignstudent'>AssignStudent</h2>
+<p>Assigns a student to a shadow</p>
+<h3 id='parameters-8'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>StuID</td>
+<td>ID of student to be assigned to a shadow</td>
+</tr>
+<tr>
+<td>ShadowID</td>
+<td>ID of shadow student is to be assigned to</td>
+</tr>
+</tbody></table>
+<h3 id='responses-8'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The student was assigned to the shadow properly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>There was an error assigning the student to the shadow</td>
+</tr>
+</tbody></table>
+<h2 id='clockin'>ClockIn</h2>
+<p>Clocks a student in</p>
+<h3 id='parameters-9'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RegShadowID</td>
+<td>ID of the registered shadow that the student is associated with</td>
+</tr>
+<tr>
+<td>InTime</td>
+<td>Time student is clocking in</td>
+</tr>
+<tr>
+<td>InLat</td>
+<td>Latitude student is at while clocking in</td>
+</tr>
+<tr>
+<td>InLong</td>
+<td>Longitude student is at while clocking in</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Date on which student is clocking in</td>
+</tr>
+</tbody></table>
+<h3 id='responses-9'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>ClockID</code></td>
+<td>The student was clocked in properly, and a ClockID variable was returned</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>There was an error clocking the student in</td>
+</tr>
+</tbody></table>
+<h2 id='clockout'>ClockOut</h2>
+<p>Clocks a student out</p>
+<h3 id='parameters-10'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ClockID</td>
+<td>ClockID of clock instance that is to be clocked out</td>
+</tr>
+<tr>
+<td>OutTime</td>
+<td>Time student is clocking out</td>
+</tr>
+<tr>
+<td>OutLat</td>
+<td>Latitude student is at while clocking out</td>
+</tr>
+<tr>
+<td>OutLong</td>
+<td>Longitude student is at while clocking out</td>
+</tr>
+</tbody></table>
+<h3 id='responses-10'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The student was clocked out properly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>There was an error clocking the student out</td>
+</tr>
+</tbody></table>
+<h2 id='isshadowfull'>IsShadowFull</h2>
+<p>Determines if a shadow is full or not</p>
+<h3 id='parameters-11'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ShadowID</td>
+<td>ID of shadow user is testing</td>
+</tr>
+</tbody></table>
+<h3 id='responses-11'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The shadow is full</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>The shadow is not full</td>
+</tr>
+<tr>
+<td><code>something went wrong</code></td>
+<td>There was an error determining if the shadow is full</td>
+</tr>
+</tbody></table>
+<h2 id='removepartner'>RemovePartner</h2>
+<p>Removes a specified partner</p>
+<h3 id='parameters-12'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PartnerID</td>
+<td>ID of partner to be removed</td>
+</tr>
+</tbody></table>
+<h3 id='responses-12'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The partner was removed properly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>The was an error removing the partner</td>
+</tr>
+</tbody></table>
+<h2 id='removeshadow'>RemoveShadow</h2>
+<p>Removes a shadow</p>
+<h3 id='parameters-13'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ShadowID</td>
+<td>ID of shadow to be removed</td>
+</tr>
+</tbody></table>
+<h3 id='responses-13'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The shadow was removed properly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>The was an error removing the shadow</td>
+</tr>
+</tbody></table>
+<h2 id='showcontactwithcontactid'>ShowContactWithContactID</h2>
+<p>Returns contact information for a specified contact</p>
+<h3 id='parameters-14'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ContactID</td>
+<td>ID of contact to display</td>
+</tr>
+</tbody></table>
+<h3 id='responses-14'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"ContactID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactPhoneNum"</span><span class="p">:</span><span class="w">  </span><span class="s2">"123-456-7890"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactOffice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17-B"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactEmailAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john@email.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the contact information</td>
+</tr>
+</tbody></table>
+<h2 id='showlatestclockinfowithstuid'>ShowLatestClockInfoWithStuID</h2>
+<p>Returns most recent clock info for a specified student</p>
+<h3 id='parameters-15'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>StuID</td>
+<td>ID of student to display latest clock info for</td>
+</tr>
+</tbody></table>
+<h3 id='responses-15'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"ClockID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"RegShadowID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"InTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10:10:10.0000000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"OutTime"</span><span class="p">:</span><span class="w">  </span><span class="s2">"12:30:34.0000000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"InLat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"37.785834"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"InLong"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-122.406417"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"OutLat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"37.785834"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"OutLong"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-122.406417"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-09"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the clock info</td>
+</tr>
+</tbody></table>
+<h2 id='showpartnerandcontactwithcontactid'>ShowPartnerAndContactWithContactID</h2>
+<p>Returns partner and contact info for a specified contact</p>
+<h3 id='parameters-16'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ContactID</td>
+<td>ID of contact to display info for</td>
+</tr>
+</tbody></table>
+<h3 id='responses-16'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"PartnerID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"PartnerName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medicine Inc."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"PartnerAddress"</span><span class="p">:</span><span class="w">  </span><span class="s2">"123 E South St"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"PartnerPhoneNum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"417-777-7777"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactPhoneNum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"417-888-8888"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactOffice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"22-C"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactEmailAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john@email.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the partner and contact info</td>
+</tr>
+</tbody></table>
+<h2 id='showpartners'>ShowPartners</h2>
+<p>Returns all available partners</p>
+<h3 id='parameters-17'>Parameters</h3>
+<p>None</p>
+<h3 id='responses-17'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"PartnerID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"PartnerName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medicine Inc."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"PartnerAddress"</span><span class="p">:</span><span class="w">  </span><span class="s2">"123 E South St"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"PartnerPhoneNum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"417-777-7777"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactPhoneNum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"417-888-8888"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactOffice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"22-C"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactEmailAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john@email.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the partner info</td>
+</tr>
+</tbody></table>
+<h2 id='showpartnerwithpartnerid'>ShowPartnerWithPartnerID</h2>
+<p>Returns partner info for a specified partner</p>
+<h3 id='parameters-18'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PartnerID</td>
+<td>ID of partner to display info for</td>
+</tr>
+</tbody></table>
+<h3 id='responses-18'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"PartnerID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ContactID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"PartnerName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medicine Inc."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"PartnerAddress"</span><span class="p">:</span><span class="w">  </span><span class="s2">"123 E South St"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"PartnerPhoneNum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"417-777-7777"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the partner info</td>
+</tr>
+</tbody></table>
+<h2 id='showshadowavailability'>ShowShadowAvailability</h2>
+<p>Returns availability of a specified shadow</p>
+<h3 id='parameters-19'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ShadowID</td>
+<td>ID of shadow to display availability of</td>
+</tr>
+</tbody></table>
+<h3 id='responses-19'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"ShadowMaxEnrollment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Enrolled"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the shadow availability info</td>
+</tr>
+</tbody></table>
+<h2 id='showshadowavailabilityjson'>ShowShadowAvailabilityJSON</h2>
+<p>Same as ShowShadowAvailability, but returns an HttpResponseMessage rather than a string</p>
+<h3 id='parameters-20'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ShadowID</td>
+<td>ID of shadow to display availability of</td>
+</tr>
+</tbody></table>
+<h3 id='responses-20'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"ShadowMaxEnrollment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Enrolled"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the shadow availability info</td>
+</tr>
+</tbody></table>
+<h2 id='showshadowsinstrand'>ShowShadowsInStrand</h2>
+<p>Returns all shadows in a specified strand</p>
+<h3 id='parameters-21'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>StrandID</td>
+<td>ID of strand to show all associated shadows</td>
+</tr>
+</tbody></table>
+<h3 id='responses-21'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"ShadowID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"PartnerID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medicine Shadow 1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowStartTime"</span><span class="p">:</span><span class="w">  </span><span class="s2">"10:15:00.000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowEndTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12:15:00.000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowLocation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"171 N Third Ave"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowDressCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Business Casual"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowParking"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parking Lot On Site"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowOtherDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bring A Pen"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowMaxEnrollment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StrandID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the shadow info</td>
+</tr>
+</tbody></table>
+<h2 id='showshadowsinstrandjson'>ShowShadowsInStrandJSON</h2>
+<p>Same as ShowShadowsInStrand, but returns an HttpResponseMessage instead of a string</p>
+<h3 id='parameters-22'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>StrandID</td>
+<td>ID of strand to show all associated shadows</td>
+</tr>
+</tbody></table>
+<h3 id='responses-22'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"ShadowID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"PartnerID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medicine Shadow 1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowStartTime"</span><span class="p">:</span><span class="w">  </span><span class="s2">"10:15:00.000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowEndTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12:15:00.000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowLocation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"171 N Third Ave"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowDressCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Business Casual"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowParking"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parking Lot On Site"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowOtherDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bring A Pen"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowMaxEnrollment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StrandID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the shadow info</td>
+</tr>
+</tbody></table>
+<h2 id='showshadowwithshadowid'>ShowShadowWithShadowID</h2>
+<p>Returns info on a specified shadow</p>
+<h3 id='parameters-23'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ShadowID</td>
+<td>ID of shadow to display information of</td>
+</tr>
+</tbody></table>
+<h3 id='responses-23'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"ShadowID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"PartnerID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medicine Shadow 1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowStartTime"</span><span class="p">:</span><span class="w">  </span><span class="s2">"10:15:00.000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowEndTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12:15:00.000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowLocation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"171 N Third Ave"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowDressCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Business Casual"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowParking"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parking Lot On Site"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowOtherDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bring A Pen"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ShadowMaxEnrollment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StrandID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the shadow info</td>
+</tr>
+</tbody></table>
+<h2 id='showstrands'>ShowStrands</h2>
+<p>Returns info on all strands</p>
+<h3 id='parameters-24'>Parameters</h3>
+<p>None</p>
+<h3 id='responses-24'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"StrandID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"AffilaiteID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"TeachID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4hslUGfIebSgJnk1AKAYQ5Qtahma2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StrandName"</span><span class="p">:</span><span class="w">  </span><span class="s2">"Medical"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StrandLocation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Springfield Regional Hospital"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the strand info</td>
+</tr>
+</tbody></table>
+<h2 id='studentsinsession'>StudentsInSession</h2>
+<p>Returns info on all students in a specified session</p>
+<h3 id='parameters-25'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Options</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>StrandID</td>
+<td>ID of strand to display information of</td>
+<td></td>
+</tr>
+<tr>
+<td>StrandSession</td>
+<td>Specific session of strand to display information of</td>
+<td>Must be <code>AM</code> or <code>PM</code></td>
+</tr>
+</tbody></table>
+<h3 id='responses-25'>Responses</h3>
+<blockquote>
+<p>Breakdown of Returned User Data:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"StuID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hslUGfIebSgJnk1AKAYQ5Qtahma2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StrandID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"StuFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StuLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StuSchool"</span><span class="p">:</span><span class="w">  </span><span class="s2">"Kickapoo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StuAge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StuEmailAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"student@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StuPhoneNum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"417-555-5555"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"StrandSession"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AM"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>false</code></td>
+<td>The was an error displaying the strand info</td>
+</tr>
+</tbody></table>
+<h2 id='updatepartner'>UpdatePartner</h2>
+<p>Updates partner</p>
+<h3 id='parameters-26'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ContactID</td>
+<td>ID of contact associated with partner</td>
+</tr>
+<tr>
+<td>PartnerName</td>
+<td>Partner&#39;s name</td>
+</tr>
+<tr>
+<td>PartnerAddress</td>
+<td>Partner&#39;s address</td>
+</tr>
+<tr>
+<td>PartnerPhoneNum</td>
+<td>Partner&#39;s phone number</td>
+</tr>
+</tbody></table>
+<h3 id='responses-26'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The partner info was updated properly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>The was an error updating the partner info</td>
+</tr>
+</tbody></table>
+<h2 id='updateshadow'>UpdateShadow</h2>
+<p>Updates shadow</p>
+<h3 id='parameters-27'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ShadowID</td>
+<td>ID of shadow to update</td>
+</tr>
+<tr>
+<td>PartnerID</td>
+<td>ID of partner shadow is associated with</td>
+</tr>
+<tr>
+<td>ShadowName</td>
+<td>Name of shadow</td>
+</tr>
+<tr>
+<td>ShadowStartTime</td>
+<td>Shadow&#39;s start time</td>
+</tr>
+<tr>
+<td>ShadowEndTime</td>
+<td>Shadow&#39;s end time</td>
+</tr>
+<tr>
+<td>ShadowLocation</td>
+<td>Shadow&#39;s location</td>
+</tr>
+<tr>
+<td>ShadowDressCode</td>
+<td>Shadow&#39;s dress code</td>
+</tr>
+<tr>
+<td>ShadowParking</td>
+<td>Shadow&#39;s parking availability and info</td>
+</tr>
+<tr>
+<td>ShadowOtherDetails</td>
+<td>Any other important details regarding shadow</td>
+</tr>
+<tr>
+<td>ShadowMaxEnrollment</td>
+<td>Maximum number of students that can be assigned to shadow</td>
+</tr>
+</tbody></table>
+<h3 id='responses-27'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The shadow info was updated properly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>The was an error updating the shadow info</td>
+</tr>
+</tbody></table>
+<h2 id='updatestudent'>UpdateStudent</h2>
+<p>Updates student</p>
+<h3 id='parameters-28'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Options</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>StuID</td>
+<td>ID of student to update</td>
+<td></td>
+</tr>
+<tr>
+<td>StrandID</td>
+<td>ID of strand this student is associated with</td>
+<td></td>
+</tr>
+<tr>
+<td>StuFirstName</td>
+<td>Student&#39;s first name</td>
+<td></td>
+</tr>
+<tr>
+<td>StuLastName</td>
+<td>Student&#39;s last name</td>
+<td></td>
+</tr>
+<tr>
+<td>StuSchool</td>
+<td>School that student attends</td>
+<td></td>
+</tr>
+<tr>
+<td>StuAge</td>
+<td>Student&#39;s age</td>
+<td></td>
+</tr>
+<tr>
+<td>StuEmailAddress</td>
+<td>Student&#39;s email address</td>
+<td></td>
+</tr>
+<tr>
+<td>StuPhoneNum</td>
+<td>Student&#39;s phone number</td>
+<td></td>
+</tr>
+<tr>
+<td>StrandSession</td>
+<td>Session of strand student is enrolled in</td>
+<td>Must be <code>AM</code> or <code>PM</code></td>
+</tr>
+</tbody></table>
+<h3 id='responses-28'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The student info was updated properly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>The was an error updating the student info</td>
+</tr>
+</tbody></table>
+<h2 id='updateteacher'>UpdateTeacher</h2>
+<p>Updates teacher</p>
+<h3 id='parameters-29'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Options</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TeachID</td>
+<td>ID of teacher to update</td>
+<td></td>
+</tr>
+<tr>
+<td>TeachFirstName</td>
+<td>Teacher&#39;s first name</td>
+<td></td>
+</tr>
+<tr>
+<td>TeachLastName</td>
+<td>Teacher&#39;s last name</td>
+<td></td>
+</tr>
+<tr>
+<td>TeachPhoneNum</td>
+<td>Teacher&#39;s phone number</td>
+<td></td>
+</tr>
+<tr>
+<td>TeachEmailAddress</td>
+<td>Teacher&#39;s email address</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='responses-29'>Responses</h3>
+<table><thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>true</code></td>
+<td>The teacher info was updated properly</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>The was an error updating the teacher info</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
